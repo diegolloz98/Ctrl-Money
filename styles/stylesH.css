@@ -1,12 +1,16 @@
-
 .container {
     max-width: 1024px;
     margin: 0 auto;
 }
 
-.folders > .folder{
+.news > .new{
+    align-content: center;
     background-color:lightcoral;
-    width: 49%;
+    width: 85%;
     display: inline-block;
     margin-top: 1%;
+}
+
+h2 {
+    text-align: center;
 }
