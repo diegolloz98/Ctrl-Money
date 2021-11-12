@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+</head>
 <style>    
     .container {
     max-width: 1024px;
@@ -20,13 +28,6 @@
     }
 
 </style>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
@@ -63,6 +64,40 @@
                 </div>
             </div>
         </div>
+        <input id="someInput">
+        <div onclick="sendData()">Click Me</div>
     </div>
+    <script>
+        function sendData(){
+            //get the input value
+            $someInput = $('#someInput').val();
+            var myUrl = "https://mwbltx93xh.execute-api.us-east-1.amazonaws.com/dev/money";
+            var proxy = 'https://cors-anywhere.herokuapp.com/';
+            $.ajax({
+                //the url to send the data to
+                url: myUrl,
+                beforeSend: function(xhr) {
+                xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+                },
+                //the data to send to
+                data: {someInput : $someInput},
+                headers: {  'Access-Control-Allow-Origin': '*' },
+                //type. for eg: GET, POST
+                type: "POST",
+                //datatype expected to get in reply form server
+                dataType: "json",
+                //on success
+                success: function(data){
+                    //do something after something is recieved from php
+                    console.log(data);
+                },
+                //on error
+                error: function(){
+                    //bad request
+                }
+            });
+        }
+    
+    </script>
 </body>
 </html>
