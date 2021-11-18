@@ -77,10 +77,12 @@
 </body>
 <script type="text/javascript">
     $('#Submit').click(function(){
+        var formData = {name: $("#name").val(),
+                        cage: $("#age").val()}
         $.ajax({
             type: "POST",
             contentType: "application/json",
-            data: JSON.stringify(FormData),
+            data: JSON.stringify(formData),
             url: "http://mwbltx93xh.execute-api.us-east-1.amazonaws.com/dev/money",
             success: function(data){
                 //do something after something is recieved from php
