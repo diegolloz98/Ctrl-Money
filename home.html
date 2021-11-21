@@ -77,8 +77,8 @@
 </body>
 <script type="text/javascript">
     $('#Submit').click(function(){
-        var formData = {name: $("#name").val(),
-                        cage: $("#age").val()}
+        var formData = {id: $("#name").val(),
+                        money: $("#age").val()}
         $.ajax({
             type: "POST",
             contentType: "application/json",
