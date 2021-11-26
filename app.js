@@ -55,6 +55,11 @@ app.get("/home", function (req, res) {
   res.render("home.html");
 });
 
+app.get("/folders", function (req, res) {
+  res.render("folders.html");
+});
+
+
 app.get("/", function (req, res) {
   res.render("index.html");
 });
