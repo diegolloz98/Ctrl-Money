@@ -143,10 +143,10 @@
             </div>
         </div>
         <form id = "form">
-            <label id = "lbl-name">Name:</label>
+            <label id = "lbl-name">Correo:</label>
             <input id = "name" type ="text" name = "name">
 
-            <label id = "lbl-age">Age :</label>
+            <label id = "lbl-age">Total:</label>
             <input id = "age" type ="text" name = "email">
 
             <input id = "Submit" type = "button" value = "Post data">
@@ -156,7 +156,15 @@
 <script type="text/javascript">
     $('#Submit').click(function(){
         var formData = {id: $("#name").val(),
-                        money: $("#age").val()}
+                        Total: $("#age").val(),
+                        FondoDeAhorro: "",
+                        GastosBasicos: "",
+                        Donacion: "",
+                        Educacion: "",
+                        Entretenimiento: "",
+                        LibertadFinciera: ""
+                        
+                    }
         $.ajax({
             type: "POST",
             contentType: "application/json",
