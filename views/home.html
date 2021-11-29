@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<style>    
+    .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    }
+
+    .news > .new{
+        align-content: center;
+        background-color:lightcoral;
+        width: 85%;
+        display: inline-block;
+        margin-top: 1%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .team{
+        /* border: solid 1px black; */
+        margin: 1%;
+    }
+
+    /* #img2{
+        margin: 5px;
+        margin-left: 20%;
+    }
+
+    #img1{
+        margin: 5px;
+    }
+
+    .row {
+        margin-left: 10%;
+        width: 80%;
+    }
+    
+    #t2{
+        margin-left: 10%;
+    } */
+
+</style>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <a class="navbar-brand" href="#">Newsfeed</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./folders.html">Folders<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./profile.html">Profile</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <img src="./img/ctrl.png" width="150px">
+                </div>
+            </div>
+        </nav>
+        <br>
+        <div class="container">
+            <div class="row team">
+                <table>
+                    <tr>
+                        <td><h2>Gastos Basicos</h2></td>
+                        <td rowspan="2"><img id="img2" src="https://tusfinanzas.ec/wp-content/uploads/2020/06/gastos-fijios.jpg" alt="" width="300px"></td>
+                    </tr>
+                    <tr>
+                        <td><p>Son aquellos gastos necesarios que se repiten periódicamente, por lo que se sabe con antelación cuándo hay que pagarlos y qué cantidades se deben abonar. En esta categoría se encuentran los gastos de vivienda, seguros, impuestos y préstamos, entre otros. Estos pagos no suelen admitir demora y pueden conllevar penalizaciones en caso de retraso, lo que supondría un incremento de la deuda.</p></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row team">
+                <table>
+                    <tr>
+                        <td rowspan="2"><img id="img1" src="https://www.mba-madrid.com/wp-content/uploads/2020/12/Como-conseguir-libertad-financiera-e-independencia-financiera-800x528.jpg" alt="" width="300px"></td>
+                        <td><h2 id="t2">Libertad Financiera</h2></td>
+                    </tr>
+                    <tr>
+                        <td><p>Son aquellos gastos que se enfocan en obtener mas o mejores ganancias de los recursos que tenemos sin necesidad de trabajar. En esta categoría se encuentran renta de casa/departamento/bodega propio, inverisiones, negocios, entre otros. Son tambien llamados ingresos externos, cuando no se tiene la necesidad de trabajar para obtenerlos.</p></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row team">
+                <table>
+                    <tr>
+                        <td><h2>Fondo de Ahorro</h2></td>
+                        <td rowspan="2"><img id="img2" src="https://cdn-3.expansion.mx/33/08/b0f6c72640d2a5a5f5d4794c9cf6/retiro-ahorro-istock.jpg" alt="" width="300px"></td>
+                    </tr>
+                    <tr>
+                        <td><p>Son aquellos gastos necesarios para el retiro, se sabe con antelación que tenemos que pensar en el futuro, sobre como queremos seguir viviendo. Es importante empezar con el ahorro para tambien asi poder retiranos a la edad que nosotros queramos.</p></td>
+                    </tr>
+                </table>    
+            </div>
+            <div class="row team">
+                <table>
+                    <tr>
+                        <td rowspan="2"><img id="img1" src="https://www.eleconomista.com.mx/__export/1597274791859/sites/eleconomista/img/2020/08/06/fp1_070820.png_1084158909.png" alt="" width="300px"></td>
+                        <td><h2 id="t2">Educacion</h2></td>
+                    </tr>
+                    <tr>
+                        <td><p>Son aquellos gastos que benefician o enriquezen a uno mismo. En esta categoría se encuentran los gastos de cursos, clases, talleres, conferencias, entre otros. Estos suelen verse como un extra, pero es importante siempre estar mejorando y aprendiendo cosas nuevas, tanto para la salud fisica, como mental, y tambien poder obtener un aumento o un mejor puesto de trabajo</p></td>
+                    </tr>
+                </table>                
+            </div>
+            <div class="row team">
+                <table>
+                    <tr>
+                        <td><h2>Donacion</h2></td>
+                        <td rowspan="2"><img id="img2" src="https://img.freepik.com/vector-gratis/personas-que-llevan-donacion-caridad-relacionadas-iconos_53876-43091.jpg?size=626&ext=jpg" alt="" width="300px"></td>
+                    </tr>
+                    <tr>
+                        <td><p>Son aquellos gastos pequeños que hacen sentir bien a los demas y a uno mismo. En esta categoria se encuentran los gastos como donaciones a asilos, horfanatos, entre otros.</p></td>
+                    </tr>
+                </table>    
+            </div>
+            <div class="row team">
+                <table>
+                    <tr>
+                        <td rowspan="2"><img id="img1" src="http://topmanagement.com.mx/wp-content/uploads/2020/10/PWC-Entretenimiento-620x350.jpg" alt="" width="300px"></td>
+                        <td><h2 id="t2">Entretenimiento</h2></td>
+                    </tr>
+                    <tr>
+                        <td><p>Son aquellos gastos enfocados estrictamente en lujos o gustos que se quiere dar a uno mismo. En esta categoría se encuentran fiestas, salidas con amigos, viajes, entre otros. Estos son los que mas se disfrutan y en los que mas se suelen ecceder los usuarios al momento de sacar el dinero, a su vez es uno en los que se tiene que tener mas cuidado.</p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <form id = "form">
+            <label id = "lbl-name">Name:</label>
+            <input id = "name" type ="text" name = "name">
+
+            <label id = "lbl-age">Age :</label>
+            <input id = "age" type ="text" name = "email">
+
+            <input id = "Submit" type = "button" value = "Post data">
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    $('#Submit').click(function(){
+        var formData = {id: $("#name").val(),
+                        money: $("#age").val()}
+        $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(formData),
+            url: "https://mwbltx93xh.execute-api.us-east-1.amazonaws.com/dev/money",
+            success: function(data){
+                //do something after something is recieved from php
+                console.log("Success",data);
+            },
+            //on error
+            error: function(data){
+                //bad request
+                console.log("Error",data);
+            }
+        });
+    
+    })
+
+    </script>
+</html>

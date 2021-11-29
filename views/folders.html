@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>    
+    .container {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .folders > .folder{
+        background-color:#BADDCF;
+        width: 49%;
+        display: inline-block;
+        margin-top: 1%;
+    } 
+    img, input {
+        margin-left: 40%;
+    }
+    h3{
+        margin-right: 20%;
+        margin-left: 5%;
+    }
+    .folder > h2 {
+        text-align: center;
+        color: #122C53;
+    }
+    .container2{
+        text-align: center;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>folders</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <a class="navbar-brand" href="./home.html">Newsfeed</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Folders<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./profile.html">Profile</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <img src="./img/ctrl.png" width="150px">
+                </div>
+            </div>
+        </nav>
+        <br>
+        <div class="container">
+            <img src="./img/CTRL-MONEY.png" class="brand_logo" alt="Logo" width="150px">
+            <br><br>
+            <div class="container2">
+                <input type="text" id="totalDinero" placeholder="Dinero Total">
+                <button onclick="myFunction()">SEND</button>
+                <h2 id="demo"></h2>
+            </div>
+            <br>
+            <div class="folders">
+                <div class="folder">
+                    <h2>Gastos Basicos</h2>
+                    <div class="row">
+                        <h3>55%</h3>
+                        <h3 id="GB">$ </h3>
+                    </div>
+                </div>
+                <div class="folder">
+                    <h2>Libertad Financiera</h2> 
+                    <div class="row">
+                        <h3>10%</h3>
+                        <h3 id="LF">$ </h3>
+                    </div>
+                </div>
+                <div class="folder">
+                    <h2>Fondo de Ahorro</h2> 
+                    <div class="row">
+                        <h3>1O%</h3>
+                        <h3 id="FA">$ </h3>
+                    </div>
+                </div>
+                <div class="folder">
+                    <h2>Educacion</h2> 
+                    <div class="row">
+                        <h3>10%</h3>
+                        <h3 id="EDU">$ </h3>
+                    </div>
+                </div>
+                <div class="folder">
+                    <h2>Entretenimiento</h2>
+                    <div class="row">
+                        <h3>10%</h3>
+                        <h3 id="ENT">$ </h3>
+                    </div>
+                </div>
+                <div class="folder">
+                    <h2>Donacion</h2> 
+                    <div class="row">
+                        <h3>05%</h3>
+                        <h3 id="DON">$ </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+</body>
+<script type="text/javascript">
+    function myFunction() {
+        var avg = document.getElementById("totalDinero").value;
+        document.getElementById("demo").innerHTML = avg;
+
+        var avgGB = (55 * document.getElementById("totalDinero").value);
+        avgGB = avgGB / 100
+        document.getElementById("GB").innerHTML = '$ ' + avgGB + '.00';
+
+        var avgLF = (10 * document.getElementById("totalDinero").value);
+        avgLF = avgLF / 100
+        document.getElementById("LF").innerHTML = '$ ' + avgLF + '.00';
+
+        var avgFA = (10 * document.getElementById("totalDinero").value);
+        avgFA = avgFA / 100
+        document.getElementById("FA").innerHTML = '$ ' + avgFA + '.00';
+
+        var avgEDU = (10 * document.getElementById("totalDinero").value);
+        avgEDU = avgEDU / 100
+        document.getElementById("EDU").innerHTML = '$ ' + avgEDU + '.00';
+
+        var avgENT = (10 * document.getElementById("totalDinero").value);
+        avgENT = avgENT / 100
+        document.getElementById("ENT").innerHTML = '$ ' + avgENT + '.00';
+
+        var avgDON = (5 * document.getElementById("totalDinero").value);
+        avgDON = avgDON / 100
+        document.getElementById("DON").innerHTML = '$ ' + avgDON + '.00';
+
+    }
+</script>
+</html>
